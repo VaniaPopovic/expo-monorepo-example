@@ -1,9 +1,12 @@
 // Learn more https://docs.expo.dev/guides/customizing-metro/
 const { getDefaultConfig } = require('expo/metro-config');
 const { FileStore } = require('metro-cache');
+const { withNativeWind } = require('nativewind/metro');
 const path = require('path');
 
-module.exports = withTurborepoManagedCache(withMonorepoPaths(getDefaultConfig(__dirname)));
+module.exports = withTurborepoManagedCache(
+  withMonorepoPaths(withNativeWind(getDefaultConfig(__dirname), { input: './global.css' }))
+);
 
 /**
  * Add the monorepo paths to the Metro config.
