@@ -13,16 +13,14 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "bundleIdentifier": "com.bycedric.expomonorepo",
+      "bundleIdentifier": "your.bundle.identifier",
       "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.bycedric.expomonorepo",
+      "package": "your.bundle.identifier",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -30,6 +28,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": ["expo-router"],
+    "scheme": "myapp"
   }
 }
